@@ -1,0 +1,11 @@
+@import "tailwindcss";@theme {
+  --color-paper: #F2E6C2;      /* day1 */
+  --color-paper-dark: #E6D5A8;
+  --color-ink: #2B2118;
+  --color-red: #8B1E1E;
+  --color-gold: #B8860B;
+  --color-blue: #1F3A5F;
+  --font-display: "Anton", sans-serif;           /* จาก Webflow */
+  --font-fancy: "UnifrakturMaguntia", serif;     /* day1 */
+  --font-body: "IBM Plex Sans", sans-serif;
+}
