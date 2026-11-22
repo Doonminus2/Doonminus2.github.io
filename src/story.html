@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of King Arthur</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:wght@700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-paper: #F2E6C2;
+            --color-paper-dark: #E6D5A8;
+            --color-ink: #2B2118;
+            --color-red: #8B1E1E;
+            --color-gold: #B8860B;
+            --color-blue: #1F3A5F;
+            --color-border: #A89060;
+            --font-body: "Old Standard TT", Georgia, serif;
+            --font-title: "UnifrakturMaguntia", serif;
+            --font-head: "Playfair Display", serif;
+        }
+    </style>
+    <link rel="icon" href="../arthur/lancelot.png" type="image/png">
+</head>
+<body class="bg-paper text-ink font-body leading-relaxed">
+
+    <!-- header -->
+    <header class="border-b-4 border-double border-border">
+        <nav class="mx-auto flex max-w-5xl gap-6 px-4 py-4 font-bold">
+            <a href="./story.html" class="text-red hover:text-blue">Home</a>
+            <a href="../day1/about.html" class="text-red hover:text-blue">About</a>
+            <a href="../day1/Contact.html" class="text-red hover:text-blue">Contact</a>
+        </nav>
+    </header>
+
+    <div class="mx-auto max-w-5xl space-y-10 px-4 py-8">
+
+        <!-- hero -->
+        <section>
+            <h1 class="font-title text-center text-5xl text-red md:text-7xl">King Arthur</h1>
+
+            <figure class="mx-auto mt-8 max-w-3xl border border-border bg-paper-dark p-1">
+                <img src="./assets/images/arthur.png" alt="Lancelot brings Guenevere to Arthur" class="block h-auto w-full">
+            </figure>
+        </section>
+
+        <!-- intro -->
+        <main>
+            <p class="mb-3 italic">
+                <mark class="bg-gold px-1 text-paper">"Arthur Pendragon"</mark> redirects here. For other uses, see Arthur Pendragon (disambiguation) and <strong>King Arthur</strong><sup>(disambiguation).</sup>
+            </p>
+            <p>
+                <strong>King Arthur</strong> (Welsh: Brenin Arthur; Cornish: Arthur Gernow; Breton: Roue Arzhur; French: Roi Arthur) was a legendary king of
+                <a href="" class="text-red hover:text-blue">Britain</a>. He is a
+                <a href="" class="text-red hover:text-blue">folk hero</a> and a central figure in the
+                medieval literary tradition known as the
+                <a href="" class="text-red hover:text-blue">Matter of Britain</a>.
+            </p>
+        </main>
+
+        <!-- members -->
+        <section>
+            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">Members of the Round Table</h2>
+            <ol class="mt-4 grid gap-3 sm:grid-cols-3">
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">1</span>Sir Lancelot</li>
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">2</span>Sir Gawain</li>
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">3</span>Sir Galahad</li>
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">4</span>Sir Percival</li>
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">5</span>Sir Bors</li>
+                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">6</span>Sir Kay</li>
+            </ol>
+        </section>
+
+        <!-- historicity -->
+        <section>
+            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">Historicity</h2>
+            <p class="mt-4 text-sm">
+                Main article: <a href="" class="text-red hover:text-blue">Historicity of King Arthur</a>
+            </p>
+            <p class="mt-2">
+                King Arthur was traditionally accepted as a historic person. He was originally thought to have been an ancient British war commander and, at least from the early 12th century, a king. There was, however, much discussion regarding his various deeds, and contemporary scholars and clerics generally refuted the popular medieval belief in his extreme longevity and future return. From the eighteenth century onwards, there has been academic debate about the historicity of <sup>Arthur.[2]</sup>
+            </p>
+        </section>
+
+        <!-- sources -->
+        <section>
+            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">Source</h2>
+            <ul class="mt-4 flex flex-wrap gap-x-8 gap-y-2">
+                <li><a href="https://en.wikipedia.org/wiki/King_Arthur" target="_blank" class="text-red hover:text-blue">Go to main wiki</a></li>
+                <li><a href="../day1/embed.html" class="text-red hover:text-blue">Video</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- contact -->
+    <footer class="border-t-4 border-double border-border bg-paper-dark">
+        <div class="mx-auto max-w-xl px-4 py-10">
+            <h2 class="font-title text-center text-4xl text-red">Contact Me</h2>
+
+            <form class="mt-6 space-y-4">
+                <div>
+                    <label for="fullname" class="mb-1 block font-bold">Name</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="your name ..."
+                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
+                </div>
+                <div>
+                    <label for="email" class="mb-1 block font-bold">Email</label>
+                    <input type="email" name="email" id="email" placeholder="your email ..."
+                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
+                </div>
+                <div>
+                    <label for="message" class="mb-1 block font-bold">Message</label>
+                    <textarea name="message" id="message" rows="4" placeholder="write something...."
+                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold"></textarea>
+                </div>
+                <button type="submit"
+                    class="font-head cursor-pointer border-2 border-gold bg-red px-6 py-2 text-paper hover:bg-gold">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>
