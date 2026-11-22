@@ -18,6 +18,10 @@
             --font-body: "Old Standard TT", Georgia, serif;
             --font-title: "UnifrakturMaguntia", serif;
             --font-head: "Playfair Display", serif;
+            --animate-marquee: marquee 30s linear infinite;
+            @keyframes marquee {
+                to { transform: translateX(-50%); }
+            }
         }
     </style>
     <link rel="icon" href="./arthur/lancelot.png" type="image/png">
@@ -26,28 +30,56 @@
 
     <!-- nav -->
     <header class="sticky top-0 z-10 border-b-4 border-double border-border bg-paper">
-        <nav class="mx-auto flex max-w-5xl gap-6 px-4 py-4 font-bold">
-            <a href="#home" class="text-red hover:text-blue">Home</a>
-            <a href="#about" class="text-red hover:text-blue">About</a>
-            <a href="#contact" class="text-red hover:text-blue">Contact</a>
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 font-bold">
+            <a href="#home" class="font-title whitespace-nowrap text-3xl text-red">Round Table</a>
+            <div class="flex gap-6">
+                <a href="#home" class="text-red hover:text-blue">Home</a>
+                <a href="#about" class="text-red hover:text-blue">About</a>
+                <a href="#contact" class="text-red hover:text-blue">Contact</a>
+            </div>
         </nav>
     </header>
 
-    <div class="mx-auto max-w-5xl space-y-10 px-4 py-8">
+    <main class="mx-auto max-w-6xl space-y-16 px-4 py-10">
 
         <!-- hero -->
         <section id="home" class="scroll-mt-20">
-            <h1 class="font-title text-center text-5xl text-red md:text-7xl">King Arthur</h1>
-            <figure class="mx-auto mt-8 max-w-3xl border border-border bg-paper-dark p-1">
-                <img src="./src/assets/images/arthur.png" alt="Lancelot brings Guenevere to Arthur" class="block h-auto w-full">
-            </figure>
+            <div class="grid items-center gap-10 md:grid-cols-2">
+                <div>
+                    <h1 class="font-title text-6xl text-red md:text-8xl">King Arthur</h1>
+                    <p class="mt-4 text-lg">
+                        <mark class="bg-gold px-1 text-paper">"Arthur Pendragon"</mark> redirects here. The legendary king of Britain and a central figure of the Matter of Britain.
+                    </p>
+                    <a href="#members" class="font-head mt-6 inline-block rounded-full bg-red px-8 py-3 text-paper transition hover:bg-gold">
+                        Meet the Knights
+                    </a>
+                </div>
+                <figure class="relative">
+                    <div class="border-2 border-ink bg-paper-dark p-1">
+                        <img src="./src/assets/images/arthur.png" alt="Lancelot brings Guenevere to Arthur" class="block h-auto w-full">
+                    </div>
+                    <span class="font-head absolute -right-2 -bottom-3 rotate-[-12deg] rounded-lg bg-blue px-3 py-1 text-xl uppercase text-paper">Legend</span>
+                </figure>
+            </div>
+
+            <div class="mt-12 grid gap-4 sm:grid-cols-3">
+                <figure>
+                    <img src="./src/assets/emblems/round-table.svg" alt="Emblem of the Round Table" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="mt-2 text-center italic">The Round Table</figcaption>
+                </figure>
+                <figure>
+                    <img src="./src/assets/emblems/shield.svg" alt="Shield with a golden cross" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="mt-2 text-center italic">Pendragon Shield</figcaption>
+                </figure>
+                <figure>
+                    <img src="./src/assets/emblems/crown.svg" alt="Golden crown" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="mt-2 text-center italic">The Crown</figcaption>
+                </figure>
+            </div>
         </section>
 
-        <!-- intro -->
-        <main>
-            <p class="mb-3 italic">
-                <mark class="bg-gold px-1 text-paper">"Arthur Pendragon"</mark> redirects here. For other uses, see Arthur Pendragon (disambiguation) and <strong>King Arthur</strong><sup>(disambiguation).</sup>
-            </p>
+        <!-- intro text -->
+        <section>
             <p>
                 <strong>King Arthur</strong> (Welsh: Brenin Arthur; Cornish: Arthur Gernow; Breton: Roue Arzhur; French: Roi Arthur) was a legendary king of
                 <a href="https://en.wikipedia.org/wiki/Britain_in_the_Middle_Ages" target="_blank" class="text-red hover:text-blue">Britain</a>. He is a
@@ -55,24 +87,80 @@
                 medieval literary tradition known as the
                 <a href="https://en.wikipedia.org/wiki/Matter_of_Britain" target="_blank" class="text-red hover:text-blue">Matter of Britain</a>.
             </p>
-        </main>
+        </section>
+    </main>
+
+    <!-- marquee: second group is a copy so translateX(-50%) loops seamlessly -->
+    <div class="overflow-hidden border-y-4 border-double border-border bg-paper-dark py-4" aria-label="Round Table">
+        <div class="flex w-max animate-marquee motion-reduce:animate-none">
+            <div class="flex shrink-0 items-center gap-10 pr-10">
+                <span class="font-title flex items-center gap-10 text-3xl uppercase text-red">Round Table <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Camelot <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Excalibur <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Holy Grail <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"></span>
+            </div>
+            <div class="flex shrink-0 items-center gap-10 pr-10" aria-hidden="true">
+                <span class="font-title flex items-center gap-10 text-3xl uppercase text-red">Round Table <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Camelot <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Excalibur <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"> Holy Grail <img src="./src/assets/icons/smile-face.svg" alt="" class="h-8 w-8"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-6xl space-y-16 px-4 py-16">
 
         <!-- members -->
-        <section>
-            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">Members of the Round Table</h2>
-            <ol class="mt-4 grid gap-3 sm:grid-cols-3">
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">1</span>Sir Lancelot</li>
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">2</span>Sir Gawain</li>
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">3</span>Sir Galahad</li>
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">4</span>Sir Percival</li>
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">5</span>Sir Bors</li>
-                <li class="border border-border bg-paper-dark px-4 py-3"><span class="mr-2 font-bold text-gold">6</span>Sir Kay</li>
+        <section id="members" class="scroll-mt-20">
+            <h2 class="font-head border-b-2 border-gold pb-1 text-3xl font-bold text-red">Members of the Round Table</h2>
+            <ol class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/shield.svg" alt="Shield" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">1</span>Sir Lancelot</p>
+                </li>
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/excalibur.svg" alt="Sword Excalibur" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">2</span>Sir Gawain</p>
+                </li>
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/grail.svg" alt="Holy Grail" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">3</span>Sir Galahad</p>
+                </li>
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/crown.svg" alt="Crown" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">4</span>Sir Percival</p>
+                </li>
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/round-table.svg" alt="Round Table" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">5</span>Sir Bors</p>
+                </li>
+                <li class="border-2 border-ink bg-paper-dark p-6">
+                    <img src="./src/assets/emblems/castle.svg" alt="Castle" class="aspect-[4/3] w-44 border-2 border-ink object-cover">
+                    <p class="font-head mt-4 text-2xl text-red"><span class="mr-2 text-gold">6</span>Sir Kay</p>
+                </li>
             </ol>
+        </section>
+
+        <!-- gallery -->
+        <section id="gallery" class="scroll-mt-20">
+            <h2 class="font-head border-b-2 border-gold pb-1 text-3xl font-bold text-red">Gallery</h2>
+            <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <figure class="sm:col-span-2 lg:col-span-3">
+                    <img src="./src/assets/emblems/castle.svg" alt="Castle of Camelot" class="aspect-video w-full border-2 border-ink object-cover">
+                    <figcaption class="font-head mt-2 flex items-center justify-between text-xl uppercase">Camelot <img src="./src/assets/icons/arrow-black.svg" alt="" class="h-5"></figcaption>
+                </figure>
+                <figure>
+                    <img src="./src/assets/emblems/excalibur.svg" alt="Sword Excalibur" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="font-head mt-2 flex items-center justify-between text-xl uppercase">Excalibur <img src="./src/assets/icons/arrow-black.svg" alt="" class="h-5"></figcaption>
+                </figure>
+                <figure>
+                    <img src="./src/assets/emblems/grail.svg" alt="The Holy Grail" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="font-head mt-2 flex items-center justify-between text-xl uppercase">Holy Grail <img src="./src/assets/icons/arrow-black.svg" alt="" class="h-5"></figcaption>
+                </figure>
+                <figure>
+                    <img src="./src/assets/emblems/sword-stone.svg" alt="Sword in the Stone" class="aspect-[4/3] w-full border-2 border-ink object-cover">
+                    <figcaption class="font-head mt-2 flex items-center justify-between text-xl uppercase">Sword in the Stone <img src="./src/assets/icons/arrow-black.svg" alt="" class="h-5"></figcaption>
+                </figure>
+            </div>
         </section>
 
         <!-- historicity -->
         <section>
-            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">Historicity</h2>
+            <h2 class="font-head border-b-2 border-gold pb-1 text-3xl font-bold text-red">Historicity</h2>
             <p class="mt-4 text-sm">
                 Main article: <a href="https://en.wikipedia.org/wiki/Historicity_of_King_Arthur" target="_blank" class="text-red hover:text-blue">Historicity of King Arthur</a>
             </p>
@@ -83,7 +171,7 @@
 
         <!-- about -->
         <section id="about" class="scroll-mt-20">
-            <h2 class="font-head border-b-2 border-gold pb-1 text-2xl font-bold text-red">About Me</h2>
+            <h2 class="font-head border-b-2 border-gold pb-1 text-3xl font-bold text-red">About Me</h2>
             <p class="mt-4">
                 This website is about King Arthur and the Knights of the Round Table.
             </p>
@@ -97,38 +185,38 @@
 
     <!-- contact -->
     <footer id="contact" class="scroll-mt-20 border-t-4 border-double border-border bg-paper-dark">
-        <div class="mx-auto max-w-3xl px-4 py-10">
-            <h2 class="font-title text-center text-4xl text-red">Contact Me</h2>
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2">
+            <div>
+                <h2 class="font-title text-4xl text-red">Contact Me</h2>
+                <p class="mt-6 font-bold">
+                    Email:
+                    <a href="mailto:chitsanupatwayusuwanwit@email.com" class="text-red hover:text-blue">chitsanupatwayusuwanwit@email.com</a>
+                </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4007.0233649319807!2d100.77823230000001!3d13.729888900000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d664988a1bedf%3A0xcc678f180e221cd0!2sKing%20Mongkut's%20Institute%20of%20Technology%20Ladkrabang!5e1!3m2!1sen!2sth!4v1794121774285!5m2!1sen!2sth"
+                    title="Map: King Mongkut's Institute of Technology Ladkrabang"
+                    class="mt-6 h-80 w-full border-2 border-ink" allowfullscreen loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
 
-            <p class="mt-6 text-center font-bold">
-                Email:
-                <a href="mailto:chitsanupatwayusuwanwit@email.com" class="text-red hover:text-blue">chitsanupatwayusuwanwit@email.com</a>
-            </p>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4007.0233649319807!2d100.77823230000001!3d13.729888900000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d664988a1bedf%3A0xcc678f180e221cd0!2sKing%20Mongkut's%20Institute%20of%20Technology%20Ladkrabang!5e1!3m2!1sen!2sth!4v1794121774285!5m2!1sen!2sth"
-                title="Map: King Mongkut's Institute of Technology Ladkrabang"
-                class="mt-6 h-80 w-full border border-border" allowfullscreen loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
-            <form class="mt-8 space-y-4">
+            <form class="space-y-4 self-start">
                 <div>
                     <label for="fullname" class="mb-1 block font-bold">Name</label>
                     <input type="text" name="fullname" id="fullname" placeholder="your name ..."
-                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
+                        class="w-full border-2 border-ink bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
                 </div>
                 <div>
                     <label for="email" class="mb-1 block font-bold">Email</label>
                     <input type="email" name="email" id="email" placeholder="your email ..."
-                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
+                        class="w-full border-2 border-ink bg-paper px-3 py-2 focus:outline-2 focus:outline-gold">
                 </div>
                 <div>
                     <label for="message" class="mb-1 block font-bold">Message</label>
                     <textarea name="message" id="message" rows="4" placeholder="write something...."
-                        class="w-full border border-border bg-paper px-3 py-2 focus:outline-2 focus:outline-gold"></textarea>
+                        class="w-full border-2 border-ink bg-paper px-3 py-2 focus:outline-2 focus:outline-gold"></textarea>
                 </div>
                 <button type="submit"
-                    class="font-head cursor-pointer border-2 border-gold bg-red px-6 py-2 text-paper hover:bg-gold">
+                    class="font-head cursor-pointer rounded-full bg-red px-8 py-3 text-paper transition hover:bg-gold">
                     Submit
                 </button>
             </form>

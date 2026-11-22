@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img"><title>Camelot</title>
+<rect width="800" height="450" fill="#E6D5A8"/><rect x="10" y="10" width="780" height="430" fill="none" stroke="#A89060" stroke-width="3"/><rect x="16" y="16" width="768" height="418" fill="none" stroke="#A89060" stroke-width="1"/>
+<g fill="#F2E6C2"><ellipse cx="120" cy="90" rx="50" ry="18"/><ellipse cx="150" cy="78" rx="30" ry="14"/><ellipse cx="660" cy="120" rx="55" ry="18"/><ellipse cx="635" cy="108" rx="30" ry="14"/></g>
+<g fill="#C9B88A" stroke="#2B2118" stroke-width="4" stroke-linejoin="round">
+<rect x="290" y="300" width="220" height="70"/>
+<path d="M330 370V150h20v20h20v-20h20v20h20v-20h20v20h20v-20h20v20h20v-20h20V370Z"/>
+<path d="M200 380V210h20v20h15v-20h20v20h15v-20h20V380Z"/>
+<path d="M510 380V210h20v20h15v-20h20v20h15v-20h20V380Z"/></g>
+<path d="M375 370V320a25 25 0 0 1 50 0V370Z" fill="#2B2118"/><g fill="#2B2118"><rect x="355" y="215" width="14" height="30" rx="7"/><rect x="431" y="215" width="14" height="30" rx="7"/><rect x="238" y="260" width="12" height="26" rx="6"/><rect x="550" y="260" width="12" height="26" rx="6"/></g>
+<g stroke="#2B2118" stroke-width="3"><path d="M400 150V90M245 210V165M555 210V165" fill="none"/><path d="M400 90L460 105L400 120Z" fill="#8B1E1E"/><path d="M245 165L285 175L245 185Z" fill="#1F3A5F"/><path d="M555 165L595 175L555 185Z" fill="#B8860B"/></g>
+<path d="M16 392Q400 330 784 392V434H16Z" fill="#A89060" stroke="#2B2118" stroke-width="3"/></svg>

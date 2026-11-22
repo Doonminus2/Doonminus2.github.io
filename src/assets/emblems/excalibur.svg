@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><title>Excalibur</title><rect width="400" height="300" fill="#E6D5A8"/><rect x="10" y="10" width="380" height="280" fill="none" stroke="#A89060" stroke-width="3"/><rect x="16" y="16" width="368" height="268" fill="none" stroke="#A89060" stroke-width="1"/>
+<circle cx="200" cy="145" r="108" fill="none" stroke="#B8860B" stroke-width="2" stroke-dasharray="6 6"/>
+<polygon points="200,30 213,52 213,185 187,185 187,52" fill="#D8DCE2" stroke="#2B2118" stroke-width="3" stroke-linejoin="round"/><path d="M200 55V180" stroke="#9AA0AA" stroke-width="3"/>
+<rect x="140" y="185" width="120" height="16" rx="6" fill="#B8860B" stroke="#2B2118" stroke-width="3"/><rect x="193" y="201" width="14" height="36" fill="#8B1E1E" stroke="#2B2118" stroke-width="3"/><circle cx="200" cy="248" r="11" fill="#B8860B" stroke="#2B2118" stroke-width="3"/></svg>
